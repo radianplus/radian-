@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RADIAN+ | Edición #001 - Cultura K-Pop, BTS, Música & Cartelera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            radian: {
+              dark: '#080c14',
+              surface: '#0f1726',
+              card: '#141d30',
+              border: '#1f2d47',
+              orange: '#ff6600',
+              orangeGlow: '#ff7700',
+              cyan: '#00d2ff',
+              cyanGlow: '#00f0ff',
+              textMuted: '#94a3b8'
+            }
+          },
+          fontFamily: {
+            bebas: ['"Bebas Neue"', 'sans-serif'],
+            syne: ['"Syne"', 'sans-serif'],
+            inter: ['"Inter"', 'sans-serif'],
+          },
+          boxShadow: {
+            'glow-orange': '0 0 25px rgba(255, 102, 0, 0.45)',
+            'glow-cyan': '0 0 25px rgba(0, 210, 255, 0.4)',
+            'glow-card': '0 8px 32px 0 rgba(0, 0, 0, 0.6)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glow-text-orange {
+      text-shadow: 0 0 10px rgba(255, 102, 0, 0.7), 0 0 20px rgba(255, 102, 0, 0.4);
+    }
+    .glow-text-cyan {
+      text-shadow: 0 0 10px rgba(0, 210, 255, 0.7), 0 0 20px rgba(0, 210, 255, 0.4);
+    }
+    .neon-border-orange {
+      border: 1px solid rgba(255, 102, 0, 0.6);
+      box-shadow: 0 0 15px rgba(255, 102, 0, 0.3), inset 0 0 15px rgba(255, 102, 0, 0.1);
+    }
+    .neon-border-cyan {
+      border: 1px solid rgba(0, 210, 255, 0.6);
+      box-shadow: 0 0 15px rgba(0, 210, 255, 0.3), inset 0 0 15px rgba(0, 210, 255, 0.1);
+    }
+    .magazine-columns {
+      column-count: 1;
+      column-gap: 2.5rem;
+    }
+    @media (min-width: 768px) {
+      .magazine-columns {
+        column-count: 2;
+      }
+    }
+    @media (min-width: 1024px) {
+      .magazine-columns-3 {
+        column-count: 3;
+        column-gap: 2.5rem;
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080c14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1f2d47;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ff6600;
+    }
+  </style>
+</head>
+<body class="bg-[#080c14] text-slate-100 font-inter antialiased min-h-screen selection:bg-radian-orange selection:text-white pb-20">
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header class="border-b border-radian-border/60 bg-[#0b101c]/95 backdrop-blur-md sticky top-0 z-40 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
+      <div class="flex items-center justify-between">
+        
+        <!-- LOGO & BRANDING -->
+        <a href="#inicio" class="flex items-center gap-3.5 group">
+          <div class="relative w-11 h-11 rounded-full p-0.5 bg-gradient-to-tr from-radian-cyan to-radian-orange shadow-glow-orange group-hover:scale-105 transition duration-300">
+            <img src="./edicion 001/fotos/logo_badge.jpg" alt="RADIAN+ Logo" class="w-full h-full object-cover rounded-full bg-black">
+          </div>
+          <div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="font-bebas text-3xl sm:text-4xl tracking-wider text-white">RADIAN<span class="text-radian-orange glow-text-orange font-bold">+</span></span>
+              <span class="text-[9px] uppercase tracking-widest px-1.5 py-0.5 rounded bg-radian-cyan/15 text-radian-cyan border border-radian-cyan/30 hidden sm:inline-block">Edición #001</span>
+            </div>
+            <p class="text-[10px] tracking-widest text-slate-400 uppercase -mt-1 hidden sm:block">Noticias al volumen del mundo</p>
+          </div>
+        </a>
+
+        <!-- NAV LINKS -->
+        <nav class="hidden xl:flex items-center space-x-5 text-sm font-medium tracking-wide">
+          <a href="#lector-revista" class="text-white hover:text-radian-orange transition">Tapa</a>
+          <a href="#carta-editor" class="text-slate-300 hover:text-radian-orange transition">Carta del Editor</a>
+          <a href="#nota-kpop" class="text-slate-300 hover:text-radian-orange transition">Cultura K-Pop</a>
+          <a href="#nota-bts" class="text-slate-300 hover:text-radian-orange transition">BTS</a>
+          <a href="#ranking" class="text-slate-300 hover:text-radian-orange transition">Top 10</a>
+          <a href="#streaming-fisico" class="text-slate-300 hover:text-radian-orange transition">Streaming vs. Físico</a>
+          <a href="#conciertos" class="text-slate-300 hover:text-radian-orange transition">Agenda Noviembre</a>
+        </nav>
+
+        <!-- ACTION BUTTON -->
+        <div class="flex items-center gap-3">
+          <a href="#lector-revista" class="px-4 py-2 text-xs font-semibold rounded-lg bg-radian-surface border border-radian-border hover:border-radian-cyan text-slate-200 hover:text-radian-cyan transition flex items-center gap-1.5 shadow-sm">
+            <i data-lucide="book-open" class="w-4 h-4 text-radian-cyan"></i>
+            <span>Visor Revista</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BANNER HERO -->
+  <div id="inicio" class="relative w-full overflow-hidden bg-black border-b border-radian-border">
+    <div class="max-w-7xl mx-auto relative group">
+      <img src="./banner.jpeg" alt="RADIAN Banner Header" class="w-full h-40 sm:h-56 md:h-72 object-cover object-center opacity-85 hover:opacity-95 transition duration-500">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#080c14] via-transparent to-black/40 flex items-end p-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between w-full gap-4">
+          <div>
+            <span class="text-xs uppercase font-extrabold tracking-widest text-radian-orange bg-radian-orange/20 px-2.5 py-1 rounded border border-radian-orange/40">
+              Edición Oficial #001
+            </span>
+            <h1 class="text-2xl sm:text-4xl md:text-5xl font-bebas text-white tracking-wide mt-2">
+              NOTICIAS AL VOLUMEN DEL MUNDO
+            </h1>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="#carta-editor" class="px-5 py-2.5 bg-radian-orange text-white font-bold text-xs uppercase tracking-wider rounded-md hover:bg-orange-500 shadow-glow-orange transition flex items-center gap-2">
+              <i data-lucide="file-text" class="w-4 h-4"></i> Leer Edición Completa
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- VISOR INTERACTIVO DE REVISTA (3 PÁGINAS: TAPA, ON DEMAND, CIERRE)          -->
+  <!-- ========================================================================= -->
+  <section id="lector-revista" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-radian-border">
+      <div>
+        <div class="flex items-center gap-2 text-radian-cyan text-xs font-bold uppercase tracking-widest mb-1">
+          <i data-lucide="sparkle" class="w-4 h-4"></i> Revista Digital
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bebas tracking-wide text-white">
+          Visor de Edición <span class="text-radian-orange">RADIAN #001</span>
+        </h2>
+        <p class="text-sm text-slate-400">Tapa oficial y resúmenes nota por nota para hojear rápido la edición.</p>
+      </div>
+
+      <!-- Controles de Páginas (8 páginas) -->
+      <div class="flex items-center gap-2 mt-4 md:mt-0">
+        <button onclick="prevMagazinePage()" class="p-2.5 rounded-lg bg-radian-surface border border-radian-border hover:border-radian-orange text-white transition hover:scale-105" title="Página anterior (o Flecha Izquierda)">
+          <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        </button>
+        <span id="pageCounter" class="px-4 py-2 rounded-lg bg-radian-card border border-radian-border font-bebas text-lg tracking-wider text-radian-orange">
+          PÁGINA 1 / 8
+        </span>
+        <button onclick="nextMagazinePage()" class="p-2.5 rounded-lg bg-radian-surface border border-radian-border hover:border-radian-orange text-white transition hover:scale-105" title="Página siguiente (o Flecha Derecha)">
+          <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- CONTENEDOR DEL VISOR DE REVISTA -->
+    <div class="relative w-full aspect-[16/9] max-h-[760px] min-h-[500px] bg-black rounded-2xl overflow-hidden neon-border-orange shadow-glow-card transition-all duration-500">
+      
+      <!-- PÁGINA 1: TAPA / PORTADA OFICIAL (FOTO K-POP) -->
+      <div class="magazine-page absolute inset-0 transition-opacity duration-500 flex flex-col justify-between overflow-hidden bg-[#05080f]" id="mag-page-1">
+        
+        <!-- FOTO DE FONDO K-POP -->
+        <div class="absolute inset-0">
+          <img src="./edicion 001/fotos/k pop.jpg" alt="Portada Radian - Cultura K-Pop" class="w-full h-full object-cover object-top opacity-90 scale-100 hover:scale-105 transition duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/85"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-transparent to-black/85"></div>
+        </div>
+
+        <!-- HEADER DE LA TAPA: MASTHEAD ESTILO REVISTA TRADICIONAL DE MÚSICA (ROLLING STONE STYLE) -->
+        <div class="relative z-10 px-4 sm:px-8 md:px-12 pt-3 sm:pt-5 flex flex-col items-center">
+          
+          <!-- Dateline Superior: Barra de Edición y Registro Tradicional -->
+          <div class="w-full flex items-center justify-between text-[10px] sm:text-xs font-mono tracking-widest text-slate-300 uppercase pb-2 border-b border-white/25">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-radian-orange text-black font-extrabold text-[10px] tracking-wider">EDICIÓN #001</span>
+              <span class="text-white font-bold">NOVIEMBRE 2026</span>
+              <span class="hidden lg:inline text-slate-400">• BUENOS AIRES, ARG.</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-2 text-radian-cyan font-bold tracking-widest">
+              <span class="w-2 h-2 rounded-full bg-radian-cyan animate-pulse"></span>
+              <span>NOTICIAS AL VOLUMEN DEL MUNDO</span>
+            </div>
+
+            <div class="flex items-center gap-2 text-[10px] font-mono text-slate-300">
+              <span class="hidden md:inline text-slate-400">RADIANMAG.COM</span>
+              <span class="text-radian-orange font-bold bg-black/60 px-2 py-0.5 rounded border border-white/10">$3.500 ARS</span>
+            </div>
+          </div>
+          
+          <!-- Logotipo Principal Cabecera: RADIAN+ con Sello Oficial y Onda Sonora -->
+          <div class="w-full flex items-center justify-between pt-2 sm:pt-3">
+            
+            <!-- Sello Oficial RDN+ Izquierdo (Circular Badge con Logo Oficial) -->
+            <div class="hidden sm:flex items-center gap-2.5 bg-black/75 backdrop-blur-md px-2.5 py-1.5 rounded-xl border border-radian-cyan/50 shadow-lg shrink-0 group hover:border-radian-cyan transition">
+              <img src="./edicion 001/fotos/logo_badge.jpg" alt="Logo Oficial RADIAN+" class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-radian-cyan/80 object-cover shadow-[0_0_12px_rgba(0,210,255,0.5)]">
+              <div class="text-left font-mono pr-1">
+                <span class="block text-[8px] uppercase tracking-wider text-radian-cyan font-bold leading-none">SELLO OFICIAL</span>
+                <span class="block text-[11px] font-bold text-white leading-tight">RDN<span class="text-radian-orange">+</span></span>
+                <span class="block text-[8px] text-slate-400 leading-none">SOUND &amp; BEAT</span>
+              </div>
+            </div>
+
+            <!-- Centro: Gran Cabecera Tipográfica RADIAN+ -->
+            <div class="relative flex-1 flex flex-col items-center justify-center">
+              <!-- Ondas de ecualizador sutiles de fondo (ADN sonoro) -->
+              <div class="absolute inset-0 flex items-center justify-center gap-1 opacity-35 pointer-events-none select-none">
+                <span class="w-1 bg-radian-cyan h-6 rounded-full animate-pulse"></span>
+                <span class="w-1 bg-radian-cyan h-10 rounded-full animate-pulse delay-75"></span>
+                <span class="w-1 bg-cyan-400 h-14 rounded-full animate-pulse delay-150"></span>
+                <span class="w-1 bg-radian-orange h-12 rounded-full animate-pulse delay-100"></span>
+                <span class="w-1 bg-radian-orange h-16 rounded-full animate-pulse delay-200"></span>
+                <span class="w-1 bg-orange-500 h-8 rounded-full animate-pulse"></span>
+              </div>
+
+              <!-- Logotipo RADIAN+ con presencia masiva estilo Rolling Stone -->
+              <h1 class="relative z-10 font-bebas text-6xl sm:text-8xl md:text-9xl lg:text-[7.2rem] text-white tracking-[0.14em] leading-none drop-shadow-[0_4px_30px_rgba(0,0,0,0.95)] drop-shadow-[0_0_40px_rgba(0,210,255,0.25)] flex items-baseline justify-center select-none">
+                <span class="bg-gradient-to-b from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">RADIAN</span>
+                <span class="text-radian-orange glow-text-orange font-bold ml-1.5 drop-shadow-[0_0_25px_rgba(255,102,0,0.85)]">+</span>
+              </h1>
+
+              <!-- Subtítulo de Cabecera con líneas de acento -->
+              <div class="flex items-center justify-center gap-3 w-full max-w-lg -mt-1 sm:-mt-2">
+                <span class="h-[1.5px] flex-1 bg-gradient-to-r from-transparent via-radian-cyan/70 to-transparent"></span>
+                <span class="text-[9px] sm:text-[11px] font-mono uppercase tracking-[0.22em] text-slate-200 font-bold drop-shadow">
+                  REVISTA DE MÚSICA &amp; CULTURA SONORA
+                </span>
+                <span class="h-[1.5px] flex-1 bg-gradient-to-r from-transparent via-radian-orange/70 to-transparent"></span>
+              </div>
+            </div>
+
+            <!-- Bloque Derecho: Código de Registro / Barcode de Edición de Colección -->
+            <div class="hidden sm:flex flex-col items-end text-right font-mono bg-black/75 backdrop-blur-md px-2.5 py-1.5 rounded-xl border border-white/15 shadow-lg shrink-0">
+              <span class="text-[8px] text-slate-400 uppercase tracking-widest block">REGISTRO NACIONAL</span>
+              <span class="text-[10px] text-radian-orange font-bold tracking-wider block">ISSN 2953-481X</span>
+              <!-- Mini código de barras simulado estilo Rolling Stone -->
+              <div class="flex items-center gap-[2px] h-3.5 mt-1 opacity-80">
+                <span class="w-[2px] h-full bg-white"></span>
+                <span class="w-[1px] h-full bg-white"></span>
+                <span class="w-[3px] h-full bg-white"></span>
+                <span class="w-[1px] h-full bg-white"></span>
+                <span class="w-[2px] h-full bg-white"></span>
+                <span class="w-[4px] h-full bg-white"></span>
+                <span class="w-[1px] h-full bg-white"></span>
+                <span class="w-[2px] h-full bg-white"></span>
+                <span class="w-[1px] h-full bg-white"></span>
+                <span class="w-[3px] h-full bg-white"></span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- TITULARES DE TAPA (ROLLING STONE STYLE) -->
+        <div class="relative z-10 px-6 sm:px-12 pb-8 sm:pb-12 flex flex-col justify-end">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
+            
+            <!-- Columna Izquierda: Nota Central -->
+            <div class="md:col-span-7 space-y-2 text-left">
+              <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-radian-orange text-black font-extrabold text-[10px] sm:text-xs uppercase tracking-widest shadow-glow-orange">
+                <i data-lucide="flame" class="w-3.5 h-3.5"></i> NOTA DE TAPA // FENÓMENO MUNDIAL
+              </div>
+              <h2 class="font-bebas text-4xl sm:text-6xl md:text-7xl text-white tracking-wide leading-none drop-shadow-[0_4px_20px_rgba(0,0,0,1)]">
+                CULTURA K-POP
+              </h2>
+              <h3 class="font-bebas text-2xl sm:text-3xl md:text-4xl text-radian-cyan glow-text-cyan tracking-wide leading-none">
+                LA MÁQUINA QUE CONQUISTÓ EL MUNDO
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-200 max-w-xl font-normal leading-relaxed drop-shadow bg-black/60 p-3 rounded-lg border-l-4 border-radian-orange backdrop-blur-md">
+                De experimento sonoro en Seúl a la hegemonía global: moda, libros, anime y sinergia visual.
+                <span class="text-radian-orange font-semibold block mt-1">Además: BTS — El fenómeno que redefinió el Pop y los conciertos de noviembre en Argentina.</span>
+              </p>
+            </div>
+
+            <!-- Columna Derecha: Destacados -->
+            <div class="md:col-span-5 space-y-3 text-left md:text-right">
+              <div class="bg-black/65 backdrop-blur-md p-3 rounded-lg border-l-2 md:border-l-0 md:border-r-4 border-radian-cyan shadow-lg">
+                <span class="text-[10px] font-bold uppercase text-radian-cyan tracking-wider block">INFORME ESPECIAL</span>
+                <h4 class="font-bebas text-xl sm:text-2xl text-white tracking-wide">STREAMING VS. FORMATO FÍSICO</h4>
+                <p class="text-[11px] text-slate-300">La eterna batalla por el alma de la música: el récord de vinilos y CDs.</p>
+              </div>
+
+              <div class="bg-black/65 backdrop-blur-md p-3 rounded-lg border-l-2 md:border-l-0 md:border-r-4 border-radian-orange shadow-lg">
+                <span class="text-[10px] font-bold uppercase text-radian-orange tracking-wider block">AGENDA ACTUALIZADA</span>
+                <h4 class="font-bebas text-xl sm:text-2xl text-white tracking-wide">CONCIERTOS DE NOVIEMBRE</h4>
+                <p class="text-[11px] text-slate-300">Semana a semana: Bunbury, María Becerra, Calamaro, Primavera Sound y más.</p>
+              </div>
+
+              <div class="flex items-center justify-start md:justify-end gap-3 pt-1">
+                <div class="flex items-end gap-1 h-5">
+                  <span class="w-1 bg-radian-orange h-3 animate-pulse"></span>
+                  <span class="w-1 bg-radian-orange h-5 animate-pulse"></span>
+                  <span class="w-1 bg-radian-cyan h-4 animate-pulse"></span>
+                  <span class="w-1 bg-radian-cyan h-2 animate-pulse"></span>
+                  <span class="w-1 bg-radian-orange h-4 animate-pulse"></span>
+                </div>
+                <span class="font-mono text-[10px] text-slate-300 tracking-wider">RDN+ SOUND LAB</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="absolute bottom-3 left-6 z-20 hidden sm:flex items-center gap-2 bg-black/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[11px] text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-radian-orange animate-ping"></span>
+          <span>Tapa Oficial: Cultura K-Pop &amp; Edición #001</span>
+        </div>
+      </div>
+
+      <!-- PÁGINA 2: RESUMEN - CARTA DEL EDITOR -->
+      <div class="magazine-page absolute inset-0 transition-opacity duration-500 hidden bg-gradient-to-br from-[#0a0f1d] via-[#0d1424] to-[#05080f] text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between overflow-y-auto" id="mag-page-2">
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded bg-radian-orange text-black font-extrabold text-[10px] sm:text-xs uppercase tracking-widest">
+              PÁG. 02 // CARTA EDITORIAL
+            </span>
+            <span class="text-xs text-slate-400 hidden sm:inline">RADIAN+ #001</span>
+          </div>
+          <span class="text-xs font-mono text-radian-cyan font-bold tracking-wider">RESUMEN PARA HOJEAR</span>
+        </div>
+
+        <!-- Body Grid: 2 Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center my-auto py-3">
+          <!-- Columna Identidad Editorial -->
+          <div class="md:col-span-5 relative rounded-xl overflow-hidden border border-radian-border bg-black/60 shadow-xl aspect-[4/3] flex flex-col items-center justify-center p-6 text-center">
+            <div class="absolute inset-0 bg-gradient-to-tr from-radian-orange/20 via-transparent to-radian-cyan/15"></div>
+            <div class="relative z-10 flex flex-col items-center">
+              <div class="w-16 h-16 rounded-full bg-radian-orange/20 border-2 border-radian-orange flex items-center justify-center mb-3">
+                <i data-lucide="mail-open" class="w-8 h-8 text-radian-orange"></i>
+              </div>
+              <span class="font-bebas text-3xl text-white tracking-widest">MANIFIESTO RDN<span class="text-radian-orange">+</span></span>
+              <span class="text-xs text-radian-cyan font-mono mt-1">«NOTICIAS AL VOLUMEN DEL MUNDO»</span>
+              <p class="text-[11px] text-slate-400 mt-3 max-w-xs">Un refugio editorial para detener el tiempo y celebrar la pasión por el arte sonoro.</p>
+            </div>
+            <div class="absolute bottom-2 left-3 right-3 text-center text-[10px] text-slate-500 font-mono">
+              FIRMA: EL EQUIPO EDITORIAL RADIAN+
+            </div>
+          </div>
+
+          <!-- Columna Resumen Ejecutivo -->
+          <div class="md:col-span-7 space-y-3">
+            <h3 class="font-bebas text-3xl sm:text-4xl text-white tracking-wide leading-tight">
+              BIENVENIDOS A RADIAN<span class="text-radian-orange">+</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-radian-orange font-semibold">
+              Un espacio para quienes sienten la música como algo mucho más profundo que un simple sonido de fondo.
+            </p>
+
+            <div class="space-y-2 text-xs sm:text-sm text-slate-300">
+              <div class="flex items-start gap-2 bg-black/40 p-2.5 rounded-lg border-l-2 border-radian-cyan">
+                <i data-lucide="radio" class="w-4 h-4 text-radian-cyan shrink-0 mt-0.5"></i>
+                <p><strong>Nuestra Misión:</strong> Detener la vorágine diaria para analizar, reflexionar y celebrar la escena musical global y local sin algoritmos vacíos.</p>
+              </div>
+              <div class="flex items-start gap-2 bg-black/40 p-2.5 rounded-lg border-l-2 border-radian-orange">
+                <i data-lucide="sparkles" class="w-4 h-4 text-radian-orange shrink-0 mt-0.5"></i>
+                <p><strong>Enfoque Edición #001:</strong> Fenómeno K-Pop, el auge del vinilo, la devoción del ARMY de BTS y la cartelera más caliente de recitales en el país.</p>
+              </div>
+              <div class="flex items-start gap-2 bg-black/40 p-2.5 rounded-lg border-l-2 border-emerald-400">
+                <i data-lucide="heart-handshake" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                <p><strong>Comunidad Melómana:</strong> El refugio común para historias de canciones, tendencias y el amor por los escenarios.</p>
+              </div>
+            </div>
+
+            <div class="pt-1 flex items-center gap-3">
+              <a href="#carta-editor" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-radian-orange hover:bg-orange-500 text-black font-bold text-xs uppercase tracking-wider transition shadow-md">
+                <span>Leer Carta Completa</span>
+                <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-[11px] text-slate-400 font-mono">Lectura: 2 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="flex items-center justify-between border-t border-white/10 pt-2 text-[11px] text-slate-400 font-mono">
+          <span>RADIAN+ EDITORIAL // PÁGINA 02 DE 08</span>
+          <span class="text-radian-orange">Usá las flechas para seguir hojeando →</span>
+        </div>
+      </div>
+
+      <!-- PÁGINA 3: RESUMEN - NOTA CENTRAL: LA MÁQUINA DEL K-POP -->
+      <div class="magazine-page absolute inset-0 transition-opacity duration-500 hidden bg-gradient-to-br from-[#0a0f1d] via-[#0d1424] to-[#05080f] text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between overflow-y-auto" id="mag-page-3">
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded bg-radian-orange text-black font-extrabold text-[10px] sm:text-xs uppercase tracking-widest">
+              PÁG. 03 // NOTA CENTRAL
+            </span>
+            <span class="text-xs text-slate-400 hidden sm:inline">CULTURA GLOBAL</span>
+          </div>
+          <span class="text-xs font-mono text-radian-cyan font-bold tracking-wider">RESUMEN PARA HOJEAR</span>
+        </div>
+
+        <!-- Body Grid: 2 Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center my-auto py-3">
+          <!-- Columna Imagen -->
+          <div class="md:col-span-5 relative rounded-xl overflow-hidden border border-radian-border shadow-xl aspect-[4/3] group bg-black">
+            <img src="./edicion 001/fotos/k pop.jpg" alt="K-Pop" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-3 px-2 py-0.5 rounded bg-black/80 backdrop-blur text-[10px] font-bold text-radian-cyan border border-radian-cyan/40">
+              FENÓMENO ASIA &amp; LATINOAMÉRICA
+            </span>
+          </div>
+
+          <!-- Columna Resumen Ejecutivo -->
+          <div class="md:col-span-7 space-y-3">
+            <h3 class="font-bebas text-3xl sm:text-4xl text-white tracking-wide leading-tight">
+              LA MÁQUINA DEL K-POP: <span class="text-radian-cyan">HEGEMONÍA GLOBAL</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300">
+              De experimento sonoro en Seúl a la fuerza cultural más potente del siglo XXI.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+              <div class="bg-black/50 p-2.5 rounded-lg border-t-2 border-radian-orange">
+                <p class="font-bold text-radian-orange mb-1">1. Trainees</p>
+                <p class="text-[11px] text-slate-300">Años de formación estricta en canto, idiomas, danza y presencia escénica.</p>
+              </div>
+              <div class="bg-black/50 p-2.5 rounded-lg border-t-2 border-radian-cyan">
+                <p class="font-bold text-radian-cyan mb-1">2. Hibridación</p>
+                <p class="text-[11px] text-slate-300">Fusión quirúrgica de hip-hop, EDM, R&B y synth-pop con ganchos melódicos.</p>
+              </div>
+              <div class="bg-black/50 p-2.5 rounded-lg border-t-2 border-emerald-400">
+                <p class="font-bold text-emerald-400 mb-1">3. Coreografías</p>
+                <p class="text-[11px] text-slate-300">Puestas en escena milimétricas pensadas para viralidad digital y estadios.</p>
+              </div>
+            </div>
+
+            <div class="bg-black/40 p-2.5 rounded-lg border-l-2 border-radian-orange text-xs text-slate-300">
+              <strong>Impacto Total:</strong> Moda, coleccionismo, anime y la adopción de costumbres asiáticas en la juventud de Latinoamérica.
+            </div>
+
+            <div class="pt-1 flex items-center gap-3">
+              <a href="#nota-kpop" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-radian-orange hover:bg-orange-500 text-black font-bold text-xs uppercase tracking-wider transition shadow-md">
+                <span>Leer Nota Completa</span>
+                <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-[11px] text-slate-400 font-mono">Lectura: 4 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="flex items-center justify-between border-t border-white/10 pt-2 text-[11px] text-slate-400 font-mono">
+          <span>RADIAN+ NOTA DE TAPA // PÁGINA 03 DE 08</span>
+          <span class="text-radian-orange">Usá las flechas para seguir hojeando →</span>
+        </div>
+      </div>
+
+      <!-- PÁGINA 4: RESUMEN - BTS: EL FENÓMENO DEL POP GLOBAL -->
+      <div class="magazine-page absolute inset-0 transition-opacity duration-500 hidden bg-gradient-to-br from-[#0a0f1d] via-[#0d1424] to-[#05080f] text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between overflow-y-auto" id="mag-page-4">
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded bg-purple-600 text-white font-extrabold text-[10px] sm:text-xs uppercase tracking-widest">
+              PÁG. 04 // POP GLOBAL
+            </span>
+            <span class="text-xs text-slate-400 hidden sm:inline">BTS SPECIAL REPORT</span>
+          </div>
+          <span class="text-xs font-mono text-purple-400 font-bold tracking-wider">RESUMEN PARA HOJEAR</span>
+        </div>
+
+        <!-- Body Grid: 2 Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center my-auto py-3">
+          <!-- Columna Imagen -->
+          <div class="md:col-span-5 relative rounded-xl overflow-hidden border border-purple-500/40 shadow-xl aspect-[4/3] group bg-black">
+            <img src="./edicion 001/fotos/bts.jpg" alt="BTS" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-3 px-2 py-0.5 rounded bg-black/80 backdrop-blur text-[10px] font-bold text-purple-300 border border-purple-500/40">
+              BANGTAN SONYEONDAN // LEYENDA VIVA
+            </span>
+          </div>
+
+          <!-- Columna Resumen Ejecutivo -->
+          <div class="md:col-span-7 space-y-3">
+            <h3 class="font-bebas text-3xl sm:text-4xl text-white tracking-wide leading-tight">
+              BTS: <span class="text-purple-400">EL FENÓMENO QUE REDEFINIÓ EL POP</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300">
+              El quiebre del monopolio anglosajón y la creación de una comunidad global sin precedentes.
+            </p>
+
+            <div class="space-y-2 text-xs sm:text-sm text-slate-300">
+              <div class="flex items-start gap-2 bg-black/40 p-2.5 rounded-lg border-l-2 border-purple-500">
+                <i data-lucide="edit-3" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+                <p><strong>Autenticidad Lírica:</strong> Letras honestas sobre salud mental, presiones y crecimiento compuestas por los 7 miembros.</p>
+              </div>
+              <div class="flex items-start gap-2 bg-black/40 p-2.5 rounded-lg border-l-2 border-radian-cyan">
+                <i data-lucide="users" class="w-4 h-4 text-radian-cyan shrink-0 mt-0.5"></i>
+                <p><strong>El Ejército ARMY:</strong> La comunidad de fans más organizada de la historia, capaz de romper récords y movilizar causas benéficas.</p>
+              </div>
+              <div class="flex items-start gap-2 bg-black/40 p-2.5 rounded-lg border-l-2 border-radian-orange">
+                <i data-lucide="globe" class="w-4 h-4 text-radian-orange shrink-0 mt-0.5"></i>
+                <p><strong>Hito Histórico:</strong> Discursos en la ONU, liderato absoluto en el Billboard Hot 100 y estadios agotados en los 5 continentes.</p>
+              </div>
+            </div>
+
+            <div class="pt-1 flex items-center gap-3">
+              <a href="#nota-bts" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs uppercase tracking-wider transition shadow-md">
+                <span>Leer Nota Completa</span>
+                <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-[11px] text-slate-400 font-mono">Lectura: 3 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="flex items-center justify-between border-t border-white/10 pt-2 text-[11px] text-slate-400 font-mono">
+          <span>RADIAN+ BTS FEATURE // PÁGINA 04 DE 08</span>
+          <span class="text-purple-400">Usá las flechas para seguir hojeando →</span>
+        </div>
+      </div>
+
+      <!-- PÁGINA 5: RESUMEN - TOP 10 CANCIONES ARGENTINA -->
+      <div class="magazine-page absolute inset-0 transition-opacity duration-500 hidden bg-gradient-to-br from-[#0a0f1d] via-[#0d1424] to-[#05080f] text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between overflow-y-auto" id="mag-page-5">
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded bg-radian-cyan text-black font-extrabold text-[10px] sm:text-xs uppercase tracking-widest">
+              PÁG. 05 // CHARTS &amp; STREAMING
+            </span>
+            <span class="text-xs text-slate-400 hidden sm:inline">RANKING ARGENTINA</span>
+          </div>
+          <span class="text-xs font-mono text-radian-orange font-bold tracking-wider">RESUMEN PARA HOJEAR</span>
+        </div>
+
+        <!-- Body Grid: 2 Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center my-auto py-3">
+          <!-- Columna Imagen: Anuel AA -->
+          <div class="md:col-span-5 relative rounded-xl overflow-hidden border border-radian-cyan/40 shadow-xl aspect-[4/3] group bg-black">
+            <img src="./edicion 001/fotos/anuel aa.png" alt="Anuel AA" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+              <span class="px-2 py-0.5 rounded bg-radian-orange text-black font-bold text-[10px]">
+                ARTISTA DESTACADO #2 Y #4
+              </span>
+              <span class="text-xs font-mono text-white font-bold">ANUEL AA</span>
+            </div>
+          </div>
+
+          <!-- Columna Resumen Ejecutivo -->
+          <div class="md:col-span-7 space-y-3">
+            <h3 class="font-bebas text-3xl sm:text-4xl text-white tracking-wide leading-tight">
+              TOP 10 ARGENTINA: <span class="text-radian-cyan">LOS REYES DEL CHART</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300">
+              El mapa sonoro más reproducido del país: reggaetón, trap latino y colaboraciones explosivas.
+            </p>
+
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div class="bg-black/50 p-2 rounded-lg border-l-2 border-radian-orange">
+                <span class="text-radian-orange font-bold font-mono">#01</span> <strong>Karol G</strong>
+                <p class="text-[11px] text-slate-400 truncate">Si Antes Te Hubiera Conocido</p>
+              </div>
+              <div class="bg-black/50 p-2 rounded-lg border-l-2 border-radian-cyan">
+                <span class="text-radian-cyan font-bold font-mono">#02</span> <strong>Anuel AA &amp; Quevedo</strong>
+                <p class="text-[11px] text-slate-400 truncate">OA (feat. Maluma)</p>
+              </div>
+              <div class="bg-black/50 p-2 rounded-lg border-l-2 border-purple-400">
+                <span class="text-purple-400 font-bold font-mono">#03</span> <strong>Beéle</strong>
+                <p class="text-[11px] text-slate-400 truncate">Hasta Aquí Te Trajo El Río</p>
+              </div>
+              <div class="bg-black/50 p-2 rounded-lg border-l-2 border-emerald-400">
+                <span class="text-emerald-400 font-bold font-mono">#05</span> <strong>Luck Ra &amp; Valentino</strong>
+                <p class="text-[11px] text-slate-400 truncate">Tu Misterioso Alguien</p>
+              </div>
+            </div>
+
+            <p class="text-[11px] text-slate-300 bg-black/40 p-2 rounded-lg border-l-2 border-radian-cyan">
+              <strong>Pulso Urbano:</strong> Fuerte presencia de Emilia, Los Ángeles Azules, Trueno y los beats que marcan tendencia en todas las plataformas.
+            </p>
+
+            <div class="pt-1 flex items-center gap-3">
+              <a href="#ranking" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-radian-cyan hover:bg-cyan-400 text-black font-bold text-xs uppercase tracking-wider transition shadow-md">
+                <span>Ver Ranking 1 a 10</span>
+                <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-[11px] text-slate-400 font-mono">10 Temas Oficiales</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="flex items-center justify-between border-t border-white/10 pt-2 text-[11px] text-slate-400 font-mono">
+          <span>RADIAN+ CHARTS // PÁGINA 05 DE 08</span>
+          <span class="text-radian-cyan">Usá las flechas para seguir hojeando →</span>
+        </div>
+      </div>
+
+      <!-- PÁGINA 6: RESUMEN - STREAMING VS. FORMATO FÍSICO -->
+      <div class="magazine-page absolute inset-0 transition-opacity duration-500 hidden bg-gradient-to-br from-[#0a0f1d] via-[#0d1424] to-[#05080f] text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between overflow-y-auto" id="mag-page-6">
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded bg-radian-orange text-black font-extrabold text-[10px] sm:text-xs uppercase tracking-widest">
+              PÁG. 06 // INFORME ESPECIAL
+            </span>
+            <span class="text-xs text-slate-400 hidden sm:inline">INDUSTRIA SONORA</span>
+          </div>
+          <span class="text-xs font-mono text-radian-cyan font-bold tracking-wider">RESUMEN PARA HOJEAR</span>
+        </div>
+
+        <!-- Body Grid: 2 Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center my-auto py-3">
+          <!-- Columna Imagen: Nueva imagen generada -->
+          <div class="md:col-span-5 relative rounded-xl overflow-hidden border border-radian-border shadow-xl aspect-[4/3] group bg-black">
+            <img src="./edicion 001/fotos/streaming_vs_fisico.jpg" alt="Streaming vs Físico" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-3 px-2 py-0.5 rounded bg-black/80 backdrop-blur text-[10px] font-bold text-radian-orange border border-radian-orange/40">
+              VINILO VS. ALGORITMOS
+            </span>
+          </div>
+
+          <!-- Columna Resumen Ejecutivo -->
+          <div class="md:col-span-7 space-y-3">
+            <h3 class="font-bebas text-3xl sm:text-4xl text-white tracking-wide leading-tight">
+              STREAMING VS. FORMATO FÍSICO: <span class="text-radian-orange">EL DILEMA</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300">
+              ¿Por qué en plena era de 100 millones de temas en la nube, las ventas de vinilo y CD rompen récords?
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              <div class="bg-black/50 p-2.5 rounded-lg border-l-2 border-radian-cyan">
+                <p class="font-bold text-radian-cyan mb-0.5">Streaming: Inmediatez</p>
+                <p class="text-[11px] text-slate-300">Acceso instantáneo, algoritmos de descubrimiento diario y música en el bolsillo.</p>
+              </div>
+              <div class="bg-black/50 p-2.5 rounded-lg border-l-2 border-radian-orange">
+                <p class="font-bold text-radian-orange mb-0.5">Físico: El Ritual</p>
+                <p class="text-[11px] text-slate-300">El vinilo supera en ingresos al CD; las nuevas generaciones buscan tocar el arte.</p>
+              </div>
+            </div>
+
+            <div class="bg-black/40 p-2.5 rounded-lg border-l-2 border-emerald-400 text-xs text-slate-300">
+              <strong>Conclusión del Informe:</strong> No compiten, conviven: streaming para el trajín diario y formato físico para la experiencia y devoción artística.
+            </div>
+
+            <div class="pt-1 flex items-center gap-3">
+              <a href="#streaming-fisico" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-radian-orange hover:bg-orange-500 text-black font-bold text-xs uppercase tracking-wider transition shadow-md">
+                <span>Leer Informe Completo</span>
+                <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-[11px] text-slate-400 font-mono">Lectura: 5 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="flex items-center justify-between border-t border-white/10 pt-2 text-[11px] text-slate-400 font-mono">
+          <span>RADIAN+ INFORME // PÁGINA 06 DE 08</span>
+          <span class="text-radian-orange">Usá las flechas para seguir hojeando →</span>
+        </div>
+      </div>
+
+      <!-- PÁGINA 7: RESUMEN - AGENDA DE CONCIERTOS DE NOVIEMBRE -->
+      <div class="magazine-page absolute inset-0 transition-opacity duration-500 hidden bg-gradient-to-br from-[#0a0f1d] via-[#0d1424] to-[#05080f] text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between overflow-y-auto" id="mag-page-7">
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between border-b border-white/10 pb-3">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded bg-radian-cyan text-black font-extrabold text-[10px] sm:text-xs uppercase tracking-widest">
+              PÁG. 07 // AGENDA EN VIVO
+            </span>
+            <span class="text-xs text-slate-400 hidden sm:inline">CARTELERA NOVIEMBRE</span>
+          </div>
+          <span class="text-xs font-mono text-radian-orange font-bold tracking-wider">RESUMEN PARA HOJEAR</span>
+        </div>
+
+        <!-- Body Grid: 2 Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center my-auto py-3">
+          <!-- Columna Imagen: María Becerra -->
+          <div class="md:col-span-5 relative rounded-xl overflow-hidden border border-radian-cyan/40 shadow-xl aspect-[4/3] group bg-black">
+            <img src="./edicion 001/fotos/maria becerra.jpg" alt="María Becerra" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+              <span class="px-2 py-0.5 rounded bg-radian-cyan text-black font-bold text-[10px]">
+                HEADLINER NOVIEMBRE
+              </span>
+              <span class="text-xs font-mono text-white font-bold">MARÍA BECERRA</span>
+            </div>
+          </div>
+
+          <!-- Columna Resumen Ejecutivo -->
+          <div class="md:col-span-7 space-y-3">
+            <h3 class="font-bebas text-3xl sm:text-4xl text-white tracking-wide leading-tight">
+              CONCIERTOS DE NOVIEMBRE: <span class="text-radian-cyan">4 SEMANAS DE FUEGO</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300">
+              El calendario oficial con los shows más convocantes en Buenos Aires y alrededores.
+            </p>
+
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div class="bg-black/50 p-2 rounded-lg border-l-2 border-radian-orange">
+                <span class="text-radian-orange font-bold">Semana 1:</span>
+                <p class="text-[11px] text-slate-300">Bunbury en Movistar Arena, Las Pastillas del Abuelo y El Plan de la Mariposa en Obras.</p>
+              </div>
+              <div class="bg-black/50 p-2 rounded-lg border-l-2 border-radian-cyan">
+                <span class="text-radian-cyan font-bold">Semana 2:</span>
+                <p class="text-[11px] text-slate-300">María Becerra batiendo récords, Andrés Calamaro y Estelares.</p>
+              </div>
+              <div class="bg-black/50 p-2 rounded-lg border-l-2 border-purple-400">
+                <span class="text-purple-400 font-bold">Semana 3:</span>
+                <p class="text-[11px] text-slate-300">Primavera Sound Buenos Aires y festival de rock en Teatro Flores.</p>
+              </div>
+              <div class="bg-black/50 p-2 rounded-lg border-l-2 border-emerald-400">
+                <span class="text-emerald-400 font-bold">Semana 4:</span>
+                <p class="text-[11px] text-slate-300">Gran cierre de mes en Movistar Arena y acústicos íntimos en La Trastienda.</p>
+              </div>
+            </div>
+
+            <div class="pt-1 flex items-center gap-3">
+              <a href="#conciertos" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-radian-cyan hover:bg-cyan-400 text-black font-bold text-xs uppercase tracking-wider transition shadow-md">
+                <span>Ver Agenda Completa</span>
+                <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-[11px] text-slate-400 font-mono">Día por día</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="flex items-center justify-between border-t border-white/10 pt-2 text-[11px] text-slate-400 font-mono">
+          <span>RADIAN+ RECITALES // PÁGINA 07 DE 08</span>
+          <span class="text-radian-cyan">Usá las flechas para seguir hojeando →</span>
+        </div>
+      </div>
+
+      <!-- PÁGINA 8: CIERRE DE EDICIÓN & ACCESO ON DEMAND -->
+      <div class="magazine-page absolute inset-0 transition-opacity duration-500 hidden bg-[#05080f] text-white p-6 sm:p-8 flex flex-col justify-between overflow-y-auto" id="mag-page-8">
+        <div class="flex items-center justify-between border-b border-white/10 pb-2">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded bg-radian-orange text-black font-extrabold text-[10px] sm:text-xs uppercase tracking-widest">
+              PÁG. 08 // CONTRATAPA &amp; CIERRE
+            </span>
+            <span class="text-xs text-slate-400">EDICIÓN #001</span>
+          </div>
+          <span class="text-xs font-mono text-radian-cyan font-bold">FIN DE EDICIÓN</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center my-auto py-2">
+          <!-- Imagen On Demand / Cierre -->
+          <div class="relative rounded-xl overflow-hidden border border-radian-border aspect-[16/10] bg-black">
+            <img src="./promo on demand.jpeg" alt="RDN+ On Demand" class="w-full h-full object-contain">
+          </div>
+
+          <div class="space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-black/60 border border-radian-orange text-radian-orange text-xs font-mono">
+              <i data-lucide="zap" class="w-3.5 h-3.5"></i> PRÓXIMA EDICIÓN #002
+            </div>
+            <h3 class="font-bebas text-3xl sm:text-5xl text-white tracking-wide leading-tight">
+              PRÓXIMAMENTE EN RADIAN<span class="text-radian-orange">+</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              En nuestro siguiente número: el especial definitivo sobre <strong>Charly García</strong> y el informe histórico del <strong>Walkman</strong> que cambió para siempre cómo escuchamos música.
+            </p>
+
+            <div class="p-3 rounded-lg bg-black/50 border-l-2 border-radian-cyan text-xs text-slate-300 space-y-1">
+              <p class="font-bold text-radian-cyan">RDN+ Multiplataforma</p>
+              <p class="text-[11px] text-slate-400">Revista digital, reportes especiales y coberturas en vivo desde cualquier pantalla.</p>
+            </div>
+
+            <div class="pt-2 flex items-center gap-3">
+              <button onclick="setMagazinePage(1)" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-radian-surface hover:bg-radian-border border border-radian-border text-white text-xs font-bold uppercase tracking-wider transition">
+                <i data-lucide="rotate-ccw" class="w-3.5 h-3.5 text-radian-orange"></i>
+                <span>Volver a la Portada</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between border-t border-white/10 pt-2 text-[11px] text-slate-400 font-mono">
+          <span>© 2026 RADIAN+ MAGAZINE // BUENOS AIRES, ARGENTINA</span>
+          <span class="text-radian-orange font-bold">¡GRACIAS POR LEERNOS!</span>
+        </div>
+      </div>
+
+      <!-- Botones flotantes de navegación rápida en los bordes del visor -->
+      <button onclick="prevMagazinePage()" class="absolute left-3 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-black/75 hover:bg-radian-orange border border-white/20 hover:border-radian-orange text-white hover:text-black flex items-center justify-center transition shadow-xl backdrop-blur-sm group" title="Página anterior (o Flecha Izquierda)">
+        <i data-lucide="chevron-left" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+      </button>
+      <button onclick="nextMagazinePage()" class="absolute right-3 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-black/75 hover:bg-radian-orange border border-white/20 hover:border-radian-orange text-white hover:text-black flex items-center justify-center transition shadow-xl backdrop-blur-sm group" title="Página siguiente (o Flecha Derecha)">
+        <i data-lucide="chevron-right" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+      </button>
+
+      <!-- Mini-Navbar inferior (8 puntos de navegación directa) -->
+      <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 bg-black/85 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 flex items-center gap-2 shadow-lg">
+        <button onclick="setMagazinePage(1)" class="page-dot w-6 h-2.5 rounded-full bg-radian-orange transition-all" title="Pág 1: Portada"></button>
+        <button onclick="setMagazinePage(2)" class="page-dot w-2.5 h-2.5 rounded-full bg-slate-600 transition-all" title="Pág 2: Carta Editorial"></button>
+        <button onclick="setMagazinePage(3)" class="page-dot w-2.5 h-2.5 rounded-full bg-slate-600 transition-all" title="Pág 3: K-Pop"></button>
+        <button onclick="setMagazinePage(4)" class="page-dot w-2.5 h-2.5 rounded-full bg-slate-600 transition-all" title="Pág 4: BTS"></button>
+        <button onclick="setMagazinePage(5)" class="page-dot w-2.5 h-2.5 rounded-full bg-slate-600 transition-all" title="Pág 5: Top 10"></button>
+        <button onclick="setMagazinePage(6)" class="page-dot w-2.5 h-2.5 rounded-full bg-slate-600 transition-all" title="Pág 6: Streaming vs Físico"></button>
+        <button onclick="setMagazinePage(7)" class="page-dot w-2.5 h-2.5 rounded-full bg-slate-600 transition-all" title="Pág 7: Conciertos"></button>
+        <button onclick="setMagazinePage(8)" class="page-dot w-2.5 h-2.5 rounded-full bg-slate-600 transition-all" title="Pág 8: Cierre & On Demand"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- PORTAL EDITORIAL COMPLETO CON LOS TEXTOS Y FOTOS OFICIALES                -->
+  <!-- ========================================================================= -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 space-y-20">
+
+    <!-- ========================================================================= -->
+    <!-- 1. SECCIÓN: CARTA DEL EDITOR (TEXTO COMPLETO)                             -->
+    <!-- ========================================================================= -->
+    <section id="carta-editor" class="bg-gradient-to-br from-radian-surface to-radian-card rounded-2xl p-6 sm:p-10 border border-radian-border relative overflow-hidden">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center gap-2 text-radian-orange text-xs font-bold uppercase tracking-widest mb-3">
+          <i data-lucide="mail" class="w-4 h-4"></i> Mensaje Editorial // Edición #001
+        </div>
+        
+        <h2 class="text-3xl sm:text-5xl font-bebas text-white tracking-wide leading-tight">
+          BIENVENIDOS A RADIAN<span class="text-radian-orange">+</span>
+        </h2>
+        
+        <h3 class="text-lg text-radian-cyan font-semibold mt-2 mb-6">
+          Querida comunidad melómana:
+        </h3>
+
+        <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p class="first-letter:text-5xl first-letter:font-bebas first-letter:text-radian-orange first-letter:mr-3 first-letter:float-left">
+            Les damos la más cálida bienvenida a <strong>Radian +</strong>, un espacio creado por y para quienes sienten la música como algo mucho más profundo que un simple sonido de fondo.
+          </p>
+
+          <p>
+            En un mundo saturado de algoritmos e inmediatez, nacemos con el propósito de detener el tiempo un instante para analizar, reflexionar y celebrar todo lo que ocurre alrededor de la escena sonora global y local. Desde el análisis del fenómeno del K-Pop y la vigencia del formato físico hasta las coberturas de los recitales que hacen vibrar nuestros estadios, en Radian + la pasión por el arte es la que marca el ritmo de los acontecimientos.
+          </p>
+
+          <blockquote class="my-6 p-4 rounded-xl border-l-4 border-radian-cyan bg-black/40 text-white font-medium italic text-base">
+            "Nuestra misión es ser tu punto de encuentro: un lugar donde las historias detrás de las canciones, las tendencias emergentes y el amor por los escenarios encuentren un refugio común y poder compartirlo aislados de todo el ruido y los acoples que genera la vorágine diaria."
+          </blockquote>
+
+          <p>
+            Gracias por sumarte a este viaje desde el primer compás. Ponete cómodo, prepará tus sentidos y disfrutá del contenido que preparamos para vos.
+          </p>
+
+          <p class="text-base sm:text-lg text-radian-orange font-bold pt-2">
+            ¡Bienvenidos a la experiencia Radian +!
+          </p>
+
+          <div class="pt-4 border-t border-radian-border/60 flex items-center justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-wider text-slate-400">Firma Editorial</p>
+              <p class="text-sm font-bold text-white">El Equipo Editorial</p>
+              <p class="text-xs text-radian-cyan font-bold">Radian +</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-radian-orange/20 border border-radian-orange flex items-center justify-center font-bold text-radian-orange text-xs">
+              RDN+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 2. SECCIÓN: LA MÁQUINA DEL K-POP (TEXTO COMPLETO)                         -->
+    <!-- ========================================================================= -->
+    <section id="nota-kpop" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- NOTICIA COMPLETA DE K-POP (8 columnas) -->
+      <div class="lg:col-span-8 bg-radian-surface rounded-2xl p-6 sm:p-8 border border-radian-border">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-bold uppercase tracking-widest text-radian-orange flex items-center gap-1.5">
+            <i data-lucide="sparkles" class="w-4 h-4"></i> Nota de Tapa // Cultura Global
+          </span>
+          <span class="text-xs text-slate-400">Texto Completo</span>
+        </div>
+
+        <div class="relative rounded-xl overflow-hidden mb-6 aspect-[16/10] bg-black">
+          <img src="./edicion 001/fotos/k pop.jpg" alt="Cultura K-Pop" class="w-full h-full object-cover object-top hover:scale-105 transition duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+            <span class="px-3 py-1 bg-black/80 backdrop-blur rounded text-xs font-bold text-radian-cyan border border-radian-cyan/40">
+              FENÓMENO ASIA &amp; LATINOAMÉRICA
+            </span>
+          </div>
+        </div>
+
+        <h2 class="text-3xl sm:text-5xl font-bebas tracking-wide text-white leading-tight">
+          LA MÁQUINA DEL K-POP: DEL FENÓMENO LOCAL A LA HEGEMONÍA MUSICAL GLOBAL
+        </h2>
+        
+        <div class="mt-6 space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p class="first-letter:text-5xl first-letter:font-bebas first-letter:text-radian-orange first-letter:mr-3 first-letter:float-left">
+            Lo que comenzó en Corea del Sur como un experimento sonoro en los años 90 se ha transformado en la fuerza exportadora cultural más potente del siglo XXI. El K-Pop trasciende lo musical: es un estilo de vida para cientos de jóvenes que desde su vestimenta, libros, el anime y hasta sus juguetes pusieron en la escena latinoamericana el estilo de vida y costumbres de la cultura asiática.
+          </p>
+
+          <div class="mt-8 pt-6 border-t border-radian-border">
+            <h3 class="font-bebas text-2xl sm:text-3xl text-radian-cyan tracking-wide mb-3">
+              LA FÓRMULA DEL ÉXITO: PERFECCIÓN Y SINERGIA
+            </h3>
+            <p class="mb-4 text-slate-300">
+              El K-Pop se distingue por un modelo de producción estructurado en pilares fundamentales:
+            </p>
+
+            <div class="space-y-4">
+              <!-- Pilar 1 -->
+              <div class="p-4 rounded-xl bg-black/40 border-l-4 border-radian-orange">
+                <h4 class="text-white font-bold text-base mb-1 flex items-center gap-2">
+                  <span class="text-radian-orange">1.</span> El sistema de Trainees
+                </h4>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  Las agencias reclutan jóvenes talentos que pasan por años de riguroso entrenamiento en canto, danza, idiomas y presencia escénica antes de debutar.
+                </p>
+              </div>
+
+              <!-- Pilar 2 -->
+              <div class="p-4 rounded-xl bg-black/40 border-l-4 border-radian-cyan">
+                <h4 class="text-white font-bold text-base mb-1 flex items-center gap-2">
+                  <span class="text-radian-cyan">2.</span> Hibridación musical
+                </h4>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  Fusiona géneros como hip-hop, EDM, R&B y synth-pop con estribillos pegadizos e innovadores conceptos visuales.
+                </p>
+              </div>
+
+              <!-- Pilar 3 -->
+              <div class="p-4 rounded-xl bg-black/40 border-l-4 border-emerald-400">
+                <h4 class="text-white font-bold text-base mb-1 flex items-center gap-2">
+                  <span class="text-emerald-400">3.</span> Coreografías milimétricas
+                </h4>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  El aspecto visual es tan crucial como el sonoro; las puestas en escena están diseñadas para impactar tanto en conciertos como en plataformas digitales.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between mt-8 pt-4 border-t border-radian-border">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-radian-orange/20 border border-radian-orange flex items-center justify-center font-bold text-radian-orange text-xs">
+              RDN
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">Por Equipo Editorial RADIAN+</p>
+              <p class="text-[11px] text-slate-400">Edición #001</p>
+            </div>
+          </div>
+          <a href="#nota-bts" class="text-xs font-bold text-radian-orange hover:text-white transition flex items-center gap-1 uppercase tracking-wider">
+            Siguiente: Nota BTS <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- COLUMNA LATERAL (4 columnas): Sumario & Accesos -->
+      <div class="lg:col-span-4 space-y-6">
+        
+        <!-- Tarjeta Acceso Directo BTS -->
+        <div class="bg-gradient-to-br from-radian-card to-[#0d1424] rounded-2xl p-6 border border-radian-border group">
+          <span class="text-[10px] uppercase font-bold text-radian-orange tracking-widest block mb-1">CAPÍTULO 2 // K-POP</span>
+          <h4 class="font-bebas text-2xl text-white tracking-wide group-hover:text-radian-orange transition">
+            BTS: El fenómeno que redefinió el Pop
+          </h4>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Leé a continuación la cobertura completa del septeto surcoreano y la revolución digital impulsada por ARMY.
+          </p>
+          <a href="#nota-bts" class="inline-flex items-center gap-1.5 mt-4 text-xs font-bold text-radian-cyan hover:underline uppercase tracking-wider">
+            Ir a la nota completa <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Tarjeta Sumario Rápido -->
+        <div class="bg-radian-surface rounded-2xl p-5 border border-radian-border">
+          <h4 class="font-bebas text-lg tracking-wider text-radian-cyan mb-3 flex items-center gap-2">
+            <i data-lucide="layers" class="w-4 h-4"></i> Sumario Edición #001
+          </h4>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-center gap-2">
+              <span class="text-radian-orange font-bold font-mono">01.</span>
+              <a href="#carta-editor" class="hover:text-radian-orange transition">Carta del Editor: Bienvenidos a Radian +</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-radian-orange font-bold font-mono">02.</span>
+              <a href="#nota-kpop" class="hover:text-radian-orange transition">La máquina del K-Pop: Del fenómeno a la hegemonía</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-radian-orange font-bold font-mono">03.</span>
+              <a href="#nota-bts" class="hover:text-radian-orange transition">BTS: El fenómeno que redefinió el Pop global</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-radian-orange font-bold font-mono">04.</span>
+              <a href="#ranking" class="hover:text-radian-orange transition">Top 10 Argentina (con Anuel AA)</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-radian-orange font-bold font-mono">05.</span>
+              <a href="#streaming-fisico" class="hover:text-radian-orange transition">Streaming vs. Formato Físico</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-radian-orange font-bold font-mono">06.</span>
+              <a href="#conciertos" class="hover:text-radian-orange transition">Agenda de Noviembre (con María Becerra)</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. SECCIÓN: NOTA DE BTS (TEXTO COMPLETO + IMAGEN BTS)                     -->
+    <!-- ========================================================================= -->
+    <section id="nota-bts" class="bg-radian-surface rounded-2xl p-6 sm:p-10 border border-radian-border relative overflow-hidden">
+      <div class="max-w-4xl mx-auto">
+        
+        <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-radian-orange mb-3">
+          <i data-lucide="globe" class="w-4 h-4"></i>
+          <span>Informe Especial // Fenómeno Global</span>
+          <span>•</span>
+          <span>Edición #001</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-5xl font-bebas text-white tracking-wide leading-tight">
+          BTS: EL FENÓMENO QUE REDEFINIÓ EL POP GLOBAL
+        </h2>
+
+        <!-- FOTO OFICIAL DE BTS -->
+        <div class="relative rounded-2xl overflow-hidden my-6 border border-radian-border shadow-2xl bg-black">
+          <img src="./edicion 001/fotos/bts.jpg" alt="BTS en la Casa Blanca" class="w-full h-auto object-cover hover:scale-102 transition duration-500">
+          <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/70 to-transparent p-4 sm:p-5">
+            <p class="text-xs sm:text-sm text-slate-200 font-medium">
+              BTS durante su histórica alocución en la Casa Blanca (Washington) como embajadores culturales de la juventud global.
+            </p>
+            <p class="text-[10px] text-radian-cyan font-mono mt-0.5">RM, Jin, Suga, j-hope, Jimin, V y Jung Kook</p>
+          </div>
+        </div>
+
+        <!-- TEXTO COMPLETO DE BTS.DOCX -->
+        <div class="space-y-6 text-slate-300 text-sm sm:text-base leading-relaxed">
+          
+          <p class="first-letter:text-5xl first-letter:font-bebas first-letter:text-radian-orange first-letter:mr-3 first-letter:float-left">
+            Pocas agrupaciones han logrado transformar la industria musical con el impacto de <strong>BTS</strong>. Desde su debut en 2013 bajo una pequeña agencia de Seúl, el septeto surcoreano formado por RM, Jin, Suga, j-hope, Jimin, V y Jung Kook no solo se convirtió en el mayor exponente del K-Pop, sino en un fenómeno cultural de alcance histórico comparable al de los más grandes referentes de la música global.
+          </p>
+
+          <div class="pt-4 border-t border-radian-border/60">
+            <h3 class="font-bebas text-2xl sm:text-3xl text-radian-cyan tracking-wide mb-2">
+              LA CLAVE DE LA DIFERENCIA: AUTENTICIDAD Y NARRATIVA
+            </h3>
+            <p class="text-slate-300 mb-4">
+              A diferencia del modelo tradicional del K-Pop, donde las agencias dictaban la imagen y el sonido, BTS construyó su identidad sobre la <strong>libertad creativa y la vulnerabilidad</strong>:
+            </p>
+
+            <div class="space-y-3">
+              <div class="p-4 rounded-xl bg-black/40 border-l-4 border-radian-orange">
+                <h4 class="text-white font-bold text-sm sm:text-base mb-1">Letras con trasfondo social:</h4>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  Desde sus inicios, abordaron temáticas poco comunes en el pop comercial, como la salud mental, las presiones académicas y sociales sobre los jóvenes, y la aceptación personal (expresada en su célebre era <em>Love Yourself</em>).
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-black/40 border-l-4 border-radian-cyan">
+                <h4 class="text-white font-bold text-sm sm:text-base mb-1">Participación en la producción:</h4>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  Sus integrantes participan activamente en la composición y producción de sus canciones, fusionando hip-hop, R&amp;B, rock y pop de vanguardia.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-black/40 border-l-4 border-purple-500">
+                <h4 class="text-white font-bold text-sm sm:text-base mb-1">Un universo narrativo propio:</h4>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  A través de sus discos y videoclips desarrollaron una compleja narrativa conceptual que conecta sus álbumes como capítulos de una misma historia.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-radian-border/60">
+            <h3 class="font-bebas text-2xl sm:text-3xl text-radian-orange tracking-wide mb-2">
+              ARMY: EL MOTOR DE UNA REVOLUCIÓN DIGITAL
+            </h3>
+            <p>
+              El éxito de BTS es inseparable de <strong>ARMY</strong>, su ejército global de seguidores. Más que un club de fans, ARMY funciona como una red de comunicación y movilización social sin precedentes. A través de campañas en redes sociales, traducciones colaborativas de sus letras y acción comunitaria, esta comunidad impulsó al grupo a romper récords históricos de reproducciones, agotar estadios como el <em>Wembley Stadium</em> y liderar listas como el <em>Billboard Hot 100</em> con sencillos como <em>Dynamite</em> y <em>Butter</em>.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-radian-border/60">
+            <h3 class="font-bebas text-2xl sm:text-3xl text-white tracking-wide mb-2">
+              IMPACTO CULTURAL Y LEGADO
+            </h3>
+            <p>
+              BTS trascendió la música para convertirse en embajadores culturales de Corea del Sur y voceros de las nuevas generaciones, llegando a dar discursos en la Asamblea General de las Naciones Unidas. Su capacidad para conectar con millones de personas sin importar el idioma o la geografía consolidó un hito: demostrar que el centro de la música pop mundial ya no pertenece de forma exclusiva a Occidente.
+            </p>
+            <p class="mt-3">
+              Para entender en profundidad la trayectoria del grupo y su conexión con su fandom, el documental <em>BTS: Monumental</em> recorre los momentos clave de su carrera y el impacto global de su propuesta artística.
+            </p>
+          </div>
+
+          <!-- Conclusión editorial -->
+          <div class="p-5 rounded-xl bg-black/60 border border-radian-cyan/40 mt-6">
+            <p class="italic text-slate-200 text-sm sm:text-base">
+              "La pregunta que surge naturalmente en un caso como este, ¿logrará el k-pop con bts como bandera sostener en el tiempo su trascendencia y seguir copando el mercado musical en occidente? Lo veremos con el paso del tiempo y seguramente te vas enterar en Radian +."
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. SECCIÓN: TOP 10 ARGENTINA + FOTO ANUEL AA (SIN REPRODUCTORES)          -->
+    <!-- ========================================================================= -->
+    <section id="ranking" class="bg-gradient-to-b from-radian-surface to-radian-card rounded-2xl p-6 sm:p-8 border border-radian-border">
+      
+      <div class="pb-6 border-b border-radian-border">
+        <span class="text-xs font-bold uppercase tracking-widest text-radian-orange">
+          Charts Oficiales de la Edición
+        </span>
+        <h3 class="text-3xl sm:text-4xl font-bebas tracking-wide text-white">
+          TOP 10: LAS CANCIONES MÁS ESCUCHADAS EN ARGENTINA
+        </h3>
+        <p class="text-xs text-slate-400 mt-1">
+          Ranking oficial registrado según los datos de reproducción de la Edición #001.
+        </p>
+      </div>
+
+      <!-- DESTACADO ANUEL AA + GRILLA TOP 10 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-6 items-start">
+        
+        <!-- CARD SPOTLIGHT ANUEL AA (4 columnas) -->
+        <div class="lg:col-span-4 bg-black/60 border-2 border-radian-orange/60 rounded-2xl p-5 shadow-glow-orange/30">
+          <div class="relative rounded-xl overflow-hidden aspect-[3/4] bg-black border border-white/10 mb-4">
+            <img src="./edicion 001/fotos/anuel aa.png" alt="Anuel AA" class="w-full h-full object-cover object-top hover:scale-105 transition duration-500">
+            <div class="absolute top-3 left-3 bg-radian-orange text-black font-extrabold text-[10px] uppercase px-2.5 py-0.5 rounded shadow">
+              #2 &amp; #4 DEL CHART
+            </div>
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/80 to-transparent p-3">
+              <h4 class="font-bebas text-2xl text-white tracking-wide">ANUEL AA</h4>
+              <p class="text-[11px] text-radian-orange font-bold">Doble Impacto en el Top 10</p>
+            </div>
+          </div>
+
+          <div class="space-y-2 text-xs text-slate-300">
+            <p>
+              El referente del trap latino domina el ranking con dos sencillos entre los más reproducidos en Argentina: su hit en solitario <strong>#2 "Las mas bonitas son p#tas"</strong> y su participación en <strong>#4 "Cuando No Era Cantante (Remix)"</strong>.
+            </p>
+            <div class="pt-2 border-t border-radian-border/60 flex items-center justify-between text-[11px] text-slate-400">
+              <span>Trap / Reggaeton</span>
+              <span class="text-radian-cyan font-semibold">Tendencia Nacional</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- GRILLA DE LAS 10 CANCIONES (8 columnas, limpia y sin audio) -->
+        <div class="lg:col-span-8 space-y-3">
+          
+          <!-- #1 -->
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-black/50 border border-radian-orange/60 shadow-glow-orange/20">
+            <div class="flex items-center gap-4">
+              <span class="font-bebas text-3xl sm:text-4xl text-radian-orange glow-text-orange font-bold w-10 text-right">#1</span>
+              <div>
+                <h4 class="text-base font-bold text-white">BbY WOW</h4>
+                <p class="text-xs text-slate-300">KAROL G, Judeline, rusowsky</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded bg-radian-orange/20 text-radian-orange border border-radian-orange/40">Pop / Urbano</span>
+          </div>
+
+          <!-- #2 - ANUEL AA -->
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-black/50 border border-radian-cyan/60 shadow-glow-cyan/20">
+            <div class="flex items-center gap-4">
+              <span class="font-bebas text-3xl sm:text-4xl text-radian-cyan glow-text-cyan font-bold w-10 text-right">#2</span>
+              <div>
+                <h4 class="text-base font-bold text-white">Las mas bonitas son p#tas</h4>
+                <p class="text-xs text-slate-300">Anuel AA <span class="text-radian-orange font-semibold">• Destacado del Mes</span></p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded bg-radian-cyan/20 text-radian-cyan border border-radian-cyan/40">Trap / Reggaeton</span>
+          </div>
+
+          <!-- #3 -->
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-black/40 border border-radian-border/60">
+            <div class="flex items-center gap-4">
+              <span class="font-bebas text-3xl sm:text-4xl text-radian-orange font-bold w-10 text-right">#3</span>
+              <div>
+                <h4 class="text-base font-bold text-white">Tu jardín con enanitos</h4>
+                <p class="text-xs text-slate-300">Roze Oficial, Max Carra, Valen</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Cumbia / RKT</span>
+          </div>
+
+          <!-- #4 -->
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-black/40 border border-radian-border/60">
+            <div class="flex items-center gap-4">
+              <span class="font-bebas text-3xl sm:text-4xl text-slate-400 font-bold w-10 text-right">#4</span>
+              <div>
+                <h4 class="text-base font-bold text-white">Cuando No Era Cantante (Remix)</h4>
+                <p class="text-xs text-slate-300">El Bogueto, Anuel AA, Fuerza Regida</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Reggaeton Mex</span>
+          </div>
+
+          <!-- #5 -->
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-black/40 border border-radian-border/60">
+            <div class="flex items-center gap-4">
+              <span class="font-bebas text-3xl sm:text-4xl text-slate-400 font-bold w-10 text-right">#5</span>
+              <div>
+                <h4 class="text-base font-bold text-white">KOKO</h4>
+                <p class="text-xs text-slate-300">Omar Courtz</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Urbano</span>
+          </div>
+
+          <!-- #6 -->
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-black/40 border border-radian-border/60">
+            <div class="flex items-center gap-4">
+              <span class="font-bebas text-3xl sm:text-4xl text-slate-400 font-bold w-10 text-right">#6</span>
+              <div>
+                <h4 class="text-base font-bold text-white">No Podrás (En Vivo)</h4>
+                <p class="text-xs text-slate-300">Eugenia Quevedo, Angela Leiva</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Cuarteto</span>
+          </div>
+
+          <!-- #7 -->
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-black/40 border border-radian-border/60">
+            <div class="flex items-center gap-4">
+              <span class="font-bebas text-3xl sm:text-4xl text-slate-400 font-bold w-10 text-right">#7</span>
+              <div>
+                <h4 class="text-base font-bold text-white">PERRA</h4>
+                <p class="text-xs text-slate-300">Lezcano Alan</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">RKT</span>
+          </div>
+
+          <!-- #8 -->
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-black/40 border border-radian-border/60">
+            <div class="flex items-center gap-4">
+              <span class="font-bebas text-3xl sm:text-4xl text-slate-400 font-bold w-10 text-right">#8</span>
+              <div>
+                <h4 class="text-base font-bold text-white">POR SI MAÑANA NO ESTOY</h4>
+                <p class="text-xs text-slate-300">Omar Courtz</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Reggaeton</span>
+          </div>
+
+          <!-- #9 -->
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-black/40 border border-radian-border/60">
+            <div class="flex items-center gap-4">
+              <span class="font-bebas text-3xl sm:text-4xl text-slate-400 font-bold w-10 text-right">#9</span>
+              <div>
+                <h4 class="text-base font-bold text-white">¿Quién te dijo? (En Vivo)</h4>
+                <p class="text-xs text-slate-300">Q' Lokura &amp; Los Herrera</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Cuarteto</span>
+          </div>
+
+          <!-- #10 -->
+          <div class="flex items-center justify-between p-3.5 rounded-xl bg-black/40 border border-radian-border/60">
+            <div class="flex items-center gap-4">
+              <span class="font-bebas text-3xl sm:text-4xl text-slate-400 font-bold w-10 text-right">#10</span>
+              <div>
+                <h4 class="text-base font-bold text-white">Housewife</h4>
+                <p class="text-xs text-slate-300">Tate McRae</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Pop Internacional</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. SECCIÓN: STREAMING VS. FORMATO FÍSICO (TEXTO COMPLETO)                  -->
+    <!-- ========================================================================= -->
+    <section id="streaming-fisico" class="bg-radian-surface rounded-2xl p-6 sm:p-10 border border-radian-border relative overflow-hidden">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-radian-cyan mb-3">
+          <span>Informe Especial</span>
+          <span>•</span>
+          <span>Industria Musical</span>
+          <span>•</span>
+          <span>Edición #001</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-5xl font-bebas text-white tracking-wide leading-tight">
+          STREAMING VS. FORMATO FÍSICO: LA ETERNA BATALLA POR EL ALMA DE LA MÚSICA
+        </h2>
+
+        <!-- Imagen Destacada del Informe Especial -->
+        <div class="my-6 rounded-xl overflow-hidden border border-radian-border bg-radian-bg/60 shadow-2xl relative group">
+          <img src="edicion 001/fotos/streaming_vs_fisico.jpg" alt="Streaming vs Formato Físico - RADIAN+" class="w-full h-64 sm:h-80 md:h-96 object-cover object-center group-hover:scale-[1.01] transition-transform duration-700">
+          <div class="p-3.5 bg-black/60 backdrop-blur-md border-t border-radian-border/60 flex flex-col sm:flex-row sm:items-center justify-between text-xs text-slate-300 gap-1.5">
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-radian-cyan animate-pulse"></span>
+              <span><strong>Dicotomía Sonora:</strong> Del calor analógico del vinilo a la inmediatez algorítmica del streaming digital.</span>
+            </span>
+            <span class="text-[11px] font-mono text-radian-orange font-semibold">ARTE EDITORIAL // RDN+ LABS</span>
+          </div>
+        </div>
+        
+        <p class="text-base sm:text-lg text-radian-orange font-medium mt-3 mb-8">
+          En la era del acceso instantáneo, la forma en que consumimos música ha cambiado más en las últimas dos décadas que en todo el siglo anterior. Hoy, un usuario con una suscripción a una plataforma de streaming tiene a su alcance una biblioteca musical virtual de más de 100 millones de canciones en el bolsillo. Sin embargo, en pleno auge del algoritmo y la inmediatez, las ventas de vinilos y CDs registran récords de crecimiento interanual que no se veían desde los años 90.
+        </p>
+
+        <!-- Bloque Principal de Texto en 2 Columnas -->
+        <div class="magazine-columns text-slate-300 text-sm leading-relaxed space-y-4">
+          <p class="first-letter:text-5xl first-letter:font-bebas first-letter:text-radian-orange first-letter:mr-3 first-letter:float-left">
+            ¿Se trata solo de nostalgia o el formato físico ofrece algo que los bits en la nube no pueden replicar? Analizamos las dos caras de la experiencia musical contemporánea.
+          </p>
+
+          <h3 class="font-bebas text-2xl text-radian-cyan pt-2 tracking-wide">
+            LA ERA DEL STREAMING: CONVENIENCIA, DESCUBRIMIENTO Y OMNIPRESENCIA
+          </h3>
+
+          <p>
+            El streaming no solo cambió la forma de escuchar música; redefinió por completo la industria y los hábitos de consumo cultural.
+          </p>
+
+          <p>
+            <strong class="text-white">Biblioteca infinita al instante:</strong> La principal ventaja es la practicidad. La posibilidad de explorar discografías enteras, géneros lejanos y lanzamientos globales sin importar el lugar ni el dispositivo, transformó la música en un acompañante omnipresente de la vida cotidiana.
+          </p>
+
+          <p>
+            <strong class="text-white">El imperio del algoritmo:</strong> Plataformas como Spotify, Apple Music o YouTube Music han perfeccionado los sistemas de recomendación. Las listas de reproducción personalizadas (Discovery Weekly, radios por artista) permiten descubrir talentos emergentes e independientes que difícilmente llegarían a las radios tradicionales.
+          </p>
+
+          <p>
+            <strong class="text-white">La cultura del single:</strong> El consumo masivo por streaming ha desplazado en gran medida el concepto del "álbum conceptual" en favor de sencillos de corta duración diseñados para captar la atención en los primeros tres segundos y adaptarse a tendencias en redes sociales.
+          </p>
+
+          <h3 class="font-bebas text-2xl text-radian-orange pt-4 tracking-wide">
+            EL RESURGIMIENTO DEL FÍSICO: TANGIBILIDAD, RITUAL Y COLECCIONISMO
+          </h3>
+
+          <p>
+            Frente a la inmaterialidad de los archivos digitales, el objeto físico ha experimentado un renacimiento impulsado tanto por melómanos de siempre como por las generaciones más jóvenes (Gen Z y Millennials).
+          </p>
+
+          <p>
+            <strong class="text-white">El ritual de la escucha activa:</strong> Poner un vinilo en el giradiscos o insertar un CD en el reproductor exige tiempo y atención. Desaparece la tentación de presionar "skip" a la mitad de una canción, invitando a una escucha atenta y completa de la obra tal como la concibió el artista.
+          </p>
+
+          <p>
+            <strong class="text-white">El arte palpable:</strong> El formato físico devuelve el valor al diseño gráfico, la fotografía, las letras impresas y los créditos de producción. Para muchos seguidores, comprar el disco o el cassette de su artista favorito —como ocurre con los elaborados packages de las bandas de K-Pop o las ediciones especiales de vinilo— es una forma tangible de apoyo y pertenencia.
+          </p>
+
+          <p>
+            <strong class="text-white">Calidad y propiedad real:</strong> Mientras que en el streaming se paga por el alquiler de un catálogo que puede cambiar o desaparecer por cuestiones de licencias, el disco físico es un bien propio permanente. Además, formatos como el vinilo o el CD ofrecen una calidad de audio sin la compresión dinámica habitual de las transmisiones inalámbricas.
+          </p>
+        </div>
+
+        <!-- Conclusión destacada -->
+        <div class="mt-8 p-6 rounded-xl bg-black/60 border-l-4 border-radian-orange">
+          <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+            Como conclusión podemos plantearnos que en un mundo de la inmediatez como en el que vivimos hoy, que tiene que ser todo ahora mismo y no hay lugar para los procesos, el consumidor prefiere pagar una membresía por un catálogo musical alquilado, híbrido, que no es estrictamente el contenido de la música que realmente escucha y le gusta o el melómano que compra sus cds, vinilos y es propietario de su música.
+          </p>
+          <p class="text-base sm:text-lg text-radian-orange font-bold mt-3">
+            ¿Con cuál de estos dos te identificás?
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. SECCIÓN: AGENDA DE NOVIEMBRE ACTUALIZADA + MARÍA BECERRA              -->
+    <!-- ========================================================================= -->
+    <section id="conciertos" class="space-y-8">
+      
+      <div class="pb-4 border-b border-radian-border">
+        <span class="text-xs font-bold uppercase tracking-widest text-radian-cyan">
+          Cartelera Completa y Actualizada
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-bebas tracking-wide text-white">
+          AGENDA MUSICAL: LOS CONCIERTOS MÁS ESPERADOS DE NOVIEMBRE EN ARGENTINA
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-300 mt-2 max-w-3xl leading-relaxed">
+          Noviembre promete ser uno de los meses con mayor actividad en la cartelera de recintos y estadios del país. Desde íconos del rock internacional y referentes de la música en español hasta los nombres más fuertes de la escena urbana local, te presentamos la selección oficial con los shows más destacados confirmados para las próximas semanas.
+        </p>
+      </div>
+
+      <!-- DESTACADO MARÍA BECERRA -->
+      <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-black via-radian-card to-[#121c2e] border border-radian-cyan/50 shadow-glow-cyan/20">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          
+          <div class="md:col-span-4 lg:col-span-3">
+            <div class="relative rounded-xl overflow-hidden aspect-[3/4] border border-white/20 shadow-xl bg-black">
+              <img src="./edicion 001/fotos/maria becerra.jpg" alt="María Becerra en vivo" class="w-full h-full object-cover object-top hover:scale-105 transition duration-500">
+              <div class="absolute top-2 left-2 bg-radian-cyan text-black font-extrabold text-[10px] uppercase px-2 py-0.5 rounded shadow">
+                FECHAS SELECTAS
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-8 lg:col-span-9 space-y-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-radian-cyan/20 border border-radian-cyan/40 text-radian-cyan text-xs font-bold uppercase tracking-wider">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-radian-cyan"></i> Artista Destacada de Noviembre
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-bebas text-white tracking-wide">
+              MARÍA BECERRA // RÉCORD DE FUNCIONES EN EL MOVISTAR ARENA
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              "La Nena de Argentina" consolida su hegemonía en el pop y reggaetón nacional con una imponente serie de fechas selectas en la Capital Federal: <strong>13, 14, 15, 19, 26 y 27 de noviembre</strong> en el Movistar Arena de Villa Crespo, presentando una puesta escénica de escala internacional.
+            </p>
+            <div class="pt-2 flex flex-wrap gap-2 text-xs font-mono">
+              <span class="px-2.5 py-1 rounded bg-black/60 border border-radian-border text-slate-300">13 Nov</span>
+              <span class="px-2.5 py-1 rounded bg-black/60 border border-radian-border text-slate-300">14 Nov</span>
+              <span class="px-2.5 py-1 rounded bg-black/60 border border-radian-border text-slate-300">15 Nov</span>
+              <span class="px-2.5 py-1 rounded bg-black/60 border border-radian-border text-slate-300">19 Nov</span>
+              <span class="px-2.5 py-1 rounded bg-black/60 border border-radian-border text-slate-300">26 y 27 Nov</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CRONOGRAMA SEMANAL ACTUALIZADO -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- SEMANA 1 -->
+        <div class="p-6 rounded-2xl bg-radian-surface border border-radian-border space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-radian-border">
+            <h4 class="font-bebas text-xl sm:text-2xl text-radian-orange tracking-wide">
+              SEMANA DEL 1 AL 8 DE NOVIEMBRE
+            </h4>
+            <span class="text-[10px] font-mono text-slate-400">Semana 01</span>
+          </div>
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-radian-orange">
+              <p class="font-bold text-white">4 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• Enrique Bunbury <span class="text-radian-cyan font-mono">(Movistar Arena)</span></p>
+              <p class="text-slate-300">• The Rasmus <span class="text-radian-cyan font-mono">(El Teatro Flores)</span></p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-radian-orange">
+              <p class="font-bold text-white">6 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• Ronnie Wood <span class="text-radian-cyan font-mono">(Movistar Arena)</span></p>
+              <p class="text-slate-300">• Bizarren Miusik Parti <span class="text-radian-cyan font-mono">(Teatro Flores)</span></p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-radian-orange">
+              <p class="font-bold text-white">7 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• Jorge Rojas <span class="text-radian-cyan font-mono">(Teatro Coliseo)</span></p>
+              <p class="text-slate-300">• Horcas <span class="text-radian-cyan font-mono">(Teatro Flores)</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEMANA 2 -->
+        <div class="p-6 rounded-2xl bg-radian-surface border border-radian-border space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-radian-border">
+            <h4 class="font-bebas text-xl sm:text-2xl text-radian-cyan tracking-wide">
+              SEMANA DEL 9 AL 15 DE NOVIEMBRE
+            </h4>
+            <span class="text-[10px] font-mono text-slate-400">Semana 02</span>
+          </div>
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-radian-cyan">
+              <p class="font-bold text-white">12 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• The Beatles Symphonic <span class="text-radian-cyan font-mono">(Teatro Coliseo)</span></p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-radian-cyan">
+              <p class="font-bold text-white">13 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• Abel Pintos <span class="text-radian-cyan font-mono">(Teatro Gran Rex)</span></p>
+              <p class="text-slate-300">• María Becerra <span class="text-radian-cyan font-mono">(Movistar Arena)</span></p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-radian-cyan">
+              <p class="font-bold text-white">14 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• Divididos <span class="text-radian-cyan font-mono">(Estadio Ferrocarril Oeste - Ferro)</span></p>
+              <p class="text-slate-300">• Romeo Santos &amp; Prince Royce <span class="text-radian-cyan font-mono">(Estadio José Amalfitani - Vélez)</span></p>
+              <p class="text-slate-300">• Abel Pintos <span class="text-radian-cyan font-mono">(Teatro Gran Rex)</span></p>
+              <p class="text-slate-300">• María Becerra <span class="text-radian-cyan font-mono">(Movistar Arena)</span></p>
+              <p class="text-slate-300">• Los Tipitos <span class="text-radian-cyan font-mono">(Teatro Coliseo)</span></p>
+              <p class="text-slate-300">• Asspera <span class="text-radian-cyan font-mono">(Teatro Flores)</span></p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-radian-cyan">
+              <p class="font-bold text-white">15 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• Hayley Williams <span class="text-radian-cyan font-mono">(Parque Sarmiento / Malvinas Argentinas)</span></p>
+              <p class="text-slate-300">• Abel Pintos <span class="text-radian-cyan font-mono">(Teatro Gran Rex)</span></p>
+              <p class="text-slate-300">• María Becerra <span class="text-radian-cyan font-mono">(Movistar Arena)</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEMANA 3 -->
+        <div class="p-6 rounded-2xl bg-radian-surface border border-radian-border space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-radian-border">
+            <h4 class="font-bebas text-xl sm:text-2xl text-emerald-400 tracking-wide">
+              SEMANA DEL 16 AL 22 DE NOVIEMBRE
+            </h4>
+            <span class="text-[10px] font-mono text-slate-400">Semana 03</span>
+          </div>
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-emerald-400">
+              <p class="font-bold text-white">19 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• Abel Pintos <span class="text-radian-cyan font-mono">(Teatro Gran Rex)</span></p>
+              <p class="text-slate-300">• María Becerra <span class="text-radian-cyan font-mono">(Movistar Arena)</span></p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-emerald-400">
+              <p class="font-bold text-white">20 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• Abel Pintos <span class="text-radian-cyan font-mono">(Teatro Gran Rex)</span></p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-emerald-400">
+              <p class="font-bold text-white">20 y 21 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• Las Pastillas del Abuelo <span class="text-radian-cyan font-mono">(Movistar Arena)</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEMANA 4 -->
+        <div class="p-6 rounded-2xl bg-radian-surface border border-radian-border space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-radian-border">
+            <h4 class="font-bebas text-xl sm:text-2xl text-purple-400 tracking-wide">
+              SEMANA DEL 23 AL 30 DE NOVIEMBRE
+            </h4>
+            <span class="text-[10px] font-mono text-slate-400">Semana 04</span>
+          </div>
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-purple-400">
+              <p class="font-bold text-white">23 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• Andrés Calamaro <span class="text-radian-cyan font-mono">(Movistar Arena)</span></p>
+              <p class="text-slate-300">• Raly Barrionuevo <span class="text-radian-cyan font-mono">(Teatro Coliseo)</span></p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-purple-400">
+              <p class="font-bold text-white">24 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• ZZ Top <span class="text-radian-cyan font-mono">(Movistar Arena)</span></p>
+              <p class="text-slate-300">• Hot Chip <span class="text-radian-cyan font-mono">(C. L. Art Media)</span></p>
+              <p class="text-slate-300">• Djavan <span class="text-radian-cyan font-mono">(Teatro Gran Rex)</span></p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-purple-400">
+              <p class="font-bold text-white">26 y 27 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• María Becerra <span class="text-radian-cyan font-mono">(Movistar Arena)</span></p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-purple-400">
+              <p class="font-bold text-white">28 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• Eros Ramazzotti <span class="text-radian-cyan font-mono">(Movistar Arena)</span></p>
+              <p class="text-slate-300">• A Perfect Circle + Puscifer <span class="text-radian-cyan font-mono">(Microestadio Malvinas Argentinas)</span></p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-purple-400">
+              <p class="font-bold text-white">28 y 29 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• Festival Primavera Sound <span class="text-radian-cyan font-mono">(Parque de la Ciudad)</span></p>
+              <p class="text-slate-300">• Ed Sheeran <span class="text-radian-cyan font-mono">(Estadio Tomás Adolfo Ducó - Huracán)</span></p>
+            </div>
+            <div class="p-3 rounded-xl bg-black/40 border-l-2 border-purple-400">
+              <p class="font-bold text-white">30 de noviembre:</p>
+              <p class="text-slate-300 mt-0.5">• FKA twigs <span class="text-radian-cyan font-mono">(Teatro Coliseo)</span></p>
+              <p class="text-slate-300">• Omar Courtz <span class="text-radian-cyan font-mono">(Movistar Arena)</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7. SECCIÓN: ON DEMAND                                                     -->
+    <!-- ========================================================================= -->
+    <section id="ondemand" class="relative rounded-2xl overflow-hidden neon-border-orange bg-gradient-to-r from-black via-radian-card to-black p-8 sm:p-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-radian-orange/20 border border-radian-orange/40 text-radian-orange text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="radio" class="w-3.5 h-3.5"></i> Contenido On Demand
+          </div>
+          <h3 class="text-3xl sm:text-5xl font-bebas text-white tracking-wide">
+            REVIVÍ TUS CONCIERTOS FAVORITOS EN ALTA DEFINICIÓN
+          </h3>
+          <ul class="space-y-3 text-sm text-slate-300 pt-2">
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-radian-orange/20 text-radian-orange flex items-center justify-center text-xs">✓</span>
+              <span><strong>Pre-ventas y alertas de recitales:</strong> Cobertura exclusiva de estadios.</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-radian-orange/20 text-radian-orange flex items-center justify-center text-xs">✓</span>
+              <span><strong>Grabaciones especiales:</strong> Sonido capturado en vivo durante las giras.</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-radian-orange/20 text-radian-orange flex items-center justify-center text-xs">✓</span>
+              <span><strong>Backstage interviews:</strong> Charlas íntimas en video con los artistas.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="relative rounded-xl overflow-hidden border border-radian-border bg-black/80 p-2 shadow-2xl">
+            <img src="./promo on demand.jpeg" alt="Promo On Demand" class="rounded-lg w-full h-auto object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER EDITORIAL                                                          -->
+  <!-- ========================================================================= -->
+  <footer class="mt-20 border-t border-radian-border bg-black/90 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div class="space-y-3">
+        <div class="flex items-center gap-2">
+          <span class="font-bebas text-3xl text-white">RADIAN<span class="text-radian-orange font-bold">+</span></span>
+        </div>
+        <p class="text-xs text-slate-400">
+          Noticias al volumen del mundo. Una revista de música contemporánea, cultura sonora, festivales e industria musical.
+        </p>
+        <p class="text-[11px] text-slate-500">© 2026 RADIAN Media Group. Edición #001.</p>
+      </div>
+
+      <div>
+        <h5 class="font-bebas text-lg text-white tracking-wider mb-3">Secciones</h5>
+        <ul class="space-y-2 text-xs text-slate-400">
+          <li><a href="#carta-editor" class="hover:text-radian-orange transition">Carta del Editor</a></li>
+          <li><a href="#nota-kpop" class="hover:text-radian-orange transition">La Máquina del K-Pop</a></li>
+          <li><a href="#nota-bts" class="hover:text-radian-orange transition">Nota BTS</a></li>
+          <li><a href="#ranking" class="hover:text-radian-orange transition">Top 10 Argentina</a></li>
+          <li><a href="#streaming-fisico" class="hover:text-radian-orange transition">Streaming vs. Físico</a></li>
+          <li><a href="#conciertos" class="hover:text-radian-orange transition">Agenda de Noviembre</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-bebas text-lg text-white tracking-wider mb-3">Edición #001</h5>
+        <ul class="space-y-2 text-xs text-slate-400">
+          <li>01 // Carta del Editor: Bienvenidos</li>
+          <li>02 // Nota Central: Cultura K-Pop</li>
+          <li>03 // BTS: El fenómeno del Pop</li>
+          <li>04 // Top 10 Canciones Argentina</li>
+          <li>05 // Informe: Streaming vs Físico</li>
+          <li>06 // Agenda de Noviembre</li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h5 class="font-bebas text-lg text-white tracking-wider mb-2">Newsletter RDN+</h5>
+        <p class="text-xs text-slate-400">Recibí las primicias musicales y alertas de preventas en tu correo.</p>
+        <div class="flex">
+          <input type="email" placeholder="tu@email.com" class="w-full bg-radian-surface border border-radian-border rounded-l-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-radian-orange">
+          <button onclick="alert('¡Gracias por suscribirte al newsletter de RADIAN+!')" class="bg-radian-orange px-4 rounded-r-lg text-xs font-bold text-white hover:bg-orange-500 transition">OK</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT DEL VISOR INTERACTIVO (8 PÁGINAS) -->
+  <script>
+    lucide.createIcons();
+
+    let currentPage = 1;
+    const totalPages = 8;
+
+    function setMagazinePage(page) {
+      if (page < 1 || page > totalPages) return;
+      currentPage = page;
+      for (let i = 1; i <= totalPages; i++) {
+        const pageEl = document.getElementById(`mag-page-${i}`);
+        if (pageEl) {
+          if (i === page) {
+            pageEl.classList.remove('hidden');
+          } else {
+            pageEl.classList.add('hidden');
+          }
+        }
+      }
+      const counterEl = document.getElementById('pageCounter');
+      if (counterEl) counterEl.innerText = `PÁGINA ${currentPage} / ${totalPages}`;
+      
+      document.querySelectorAll('.page-dot').forEach((dot, idx) => {
+        if (idx + 1 === currentPage) {
+          dot.classList.remove('bg-slate-600', 'w-2.5');
+          dot.classList.add('bg-radian-orange', 'w-6');
+        } else {
+          dot.classList.remove('bg-radian-orange', 'w-6');
+          dot.classList.add('bg-slate-600', 'w-2.5');
+        }
+      });
+    }
+
+    function nextMagazinePage() {
+      setMagazinePage(currentPage >= totalPages ? 1 : currentPage + 1);
+    }
+
+    function prevMagazinePage() {
+      setMagazinePage(currentPage <= 1 ? totalPages : currentPage - 1);
+    }
+
+    // Atajos de teclado para hojear con flechas izquierda y derecha
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') nextMagazinePage();
+      if (e.key === 'ArrowLeft') prevMagazinePage();
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      setMagazinePage(1);
+    });
+  </script>
+</body>
+</html>
